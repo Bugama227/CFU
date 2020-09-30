@@ -26,7 +26,7 @@ int main()
 		<< "a = " << a << endl
 		<< "b = " << b << endl;
 }
-
+// Попытка в возврат нескольких переменных (не в массиве)
 tuple <int, int> threeVarSwapping(int a, int b)
 {
 	int c = a;
@@ -35,7 +35,7 @@ tuple <int, int> threeVarSwapping(int a, int b)
 
 	return make_tuple(a, b);
 }
-
+// Попытка в работу с указателями
 void twoVarSwapping(int *a, int *b)
 {
 	*a = *a + *b;

@@ -6,8 +6,13 @@ void OneTypeCalc(double a, double b);
 
 int main()
 {
+    setlocale(LC_ALL, "Russian");
+
     double a, b;
-    cin >> a >> b;
+    cout << "Введите a = ";
+    cin >> a;
+    cout << "Введите b = ";
+    cin >> b;
     OneTypeCalc(a, b);
 }
 
