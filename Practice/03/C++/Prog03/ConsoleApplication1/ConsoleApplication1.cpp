@@ -2,8 +2,6 @@
 
 using namespace std;
 
-void OneTypeCalc(double a, double b);
-
 int main()
 {
     setlocale(LC_ALL, "Russian");
@@ -13,18 +11,14 @@ int main()
     cin >> a;
     cout << "Введите b = ";
     cin >> b;
-    OneTypeCalc(a, b);
-}
 
-void OneTypeCalc(double a, double b)
-{
-    int c = (int)a, 
+    int c = (int)a,
         d = (int)b;
 
-    cout 
+    cout
         << "a = " << a << endl
         << "b = " << b << endl
-        << "double & double " << endl
+        << "double + double " << endl
         << "+ " << a + b << endl
         << "- " << a - b << endl
         << "* " << a * b << endl

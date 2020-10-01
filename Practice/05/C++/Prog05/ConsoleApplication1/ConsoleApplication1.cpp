@@ -5,7 +5,7 @@ using namespace std;
 
 double accelerMotion(double x0, double v0, double t);
 
-const int G = 9.8;
+const double G = 9.8;
 
 int main()
 {
@@ -19,5 +19,5 @@ int main()
 
 double accelerMotion(double x0, double v0, double t)
 {
-    return x0 + v0 * t - (G * t * t)/ 2;
+    return abs((x0 + v0 * t - (G * t * t) / 2) - x0);
 }

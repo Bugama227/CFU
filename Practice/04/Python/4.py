@@ -1,19 +1,16 @@
-def two_var_swap(a, b) :
-    a = a + b
-    b = a - b
-    a = a - b
-    return (a, b)
+a = float(input("a = "))
+b = float(input("b = "))
+s = float(input("w/ additional var(1) or w/out(2) = "))
 
-def three_var_swap(a, b) :
+if(s == 1):
     c = b
     b = a
     a = c
-    return (a, b)
+elif(s == 2):
+    a = a + b
+    b = a - b
+    a = a - b
+else:
+    print("Wrong input")
 
-a = (float(input()))
-b = (float(input()))
-
-print(two_var_swap(a, b))
-print(three_var_swap(a, b))
-
-#a, b = b, a
+print(f"a = {a}\nb = {b}")

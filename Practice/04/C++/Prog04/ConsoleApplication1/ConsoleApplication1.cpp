@@ -1,44 +1,38 @@
 ﻿#include <iostream>
-#include <tuple>
 
 using namespace std;
 
-tuple <int, int> threeVarSwapping(int a, int b);
-void twoVarSwapping(int *a, int *b);
-
 int main()
 {
-	int a, b, c, d;
+	int a, b, c, s;
 
-	cin >> a >> b;
-	cout << "a = " << a << endl << "b = " << b;
+	cout << "a = ";
+	cin >> a;
 
-	tie(c, d) = threeVarSwapping(a, b);
+	cout << "b = ";
+	cin >> b;
 	
-	cout
-		<< "first swapping " << endl
-		<< "a = " << c << endl
-		<< "b = " << d << endl;
+	cout << "With additional var(1) or without(2) = ";
+	cin >> s;
 
-	twoVarSwapping(&a, &b);
+	switch (s)
+	{
+		case 1:
+			c = a;
+			a = b;
+			b = c;
+			break;
+		case 2:
+			a = a + b;
+			b = a - b;
+			a = a - b;
+			break;
+		default:
+			cout << "Incorrect input" << endl;
+			break;
+	}
+
 	cout
-		<< "second swapping " << endl
 		<< "a = " << a << endl
 		<< "b = " << b << endl;
-}
-// Попытка в возврат нескольких переменных (не в массиве)
-tuple <int, int> threeVarSwapping(int a, int b)
-{
-	int c = a;
-	a = b;
-	b = c;
-
-	return make_tuple(a, b);
-}
-// Попытка в работу с указателями
-void twoVarSwapping(int *a, int *b)
-{
-	*a = *a + *b;
-	*b = *a - *b;
-	*a = *a - *b;
 }
